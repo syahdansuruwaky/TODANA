@@ -1,0 +1,239 @@
+/* ================= RESET ================= */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+/* ================= WARNA ================= */
+:root{
+  --biru:#2f4254;
+  --biru-gelap:#1e2c38;
+  --putih:#ffffff;
+  --abu:#f4f6f8;
+  --biru-btn:#3fa9f5;
+  --hijau:#25D366;
+}
+
+/* ================= BODY ================= */
+body{
+  background:var(--abu);
+  color:#333;
+}
+
+/* ================= HEADER ================= */
+header{
+  background:linear-gradient(135deg, var(--biru), var(--biru-gelap));
+  padding:24px 0;
+  text-align:center;
+  color:var(--putih);
+  box-shadow:0 5px 15px rgba(0,0,0,.2);
+}
+
+header h1{
+  font-size:30px;
+  letter-spacing:3px;
+}
+
+nav ul{
+  list-style:none;
+  display:flex;
+  justify-content:center;
+  gap:30px;
+  margin-top:12px;
+}
+
+nav a{
+  color:var(--putih);
+  text-decoration:none;
+  font-weight:600;
+  position:relative;
+}
+
+nav a::after{
+  content:'';
+  position:absolute;
+  width:0;
+  height:2px;
+  background:#fff;
+  left:0;
+  bottom:-6px;
+  transition:.3s;
+}
+
+nav a:hover::after{
+  width:100%;
+}
+
+/* ================= BERANDA PROFESIONAL ================= */
+.banner{
+  max-width:800px;
+  margin:30px auto;
+  background:var(--putih);
+  padding:25px;
+  border-radius:28px;
+  box-shadow:0 20px 45px rgba(0,0,0,.22);
+  animation:fadeUp .8s ease;
+}
+
+.banner img{
+  width:100%;
+  border-radius:22px;
+  margin-bottom:18px;
+}
+
+.kata{
+  text-align:center;
+  padding:5px 10px;
+}
+
+.kata marquee{
+  font-weight:700;
+  font-size:16px;
+  color:var(--biru);
+  margin-bottom:12px;
+}
+
+.kata p{
+  font-size:14px;
+  line-height:1.9;
+  color:#444;
+  max-width:650px;
+  margin:0 auto;
+}
+
+/* Animasi halus */
+@keyframes fadeUp{
+  from{
+    opacity:0;
+    transform:translateY(20px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+/* ================= PRODUK ================= */
+.product-list{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:24px;
+  padding:25px;
+}
+
+.product-card{
+  background:var(--putih);
+  padding:20px;
+  border-radius:24px;
+  text-align:center;
+  box-shadow:0 18px 40px rgba(0,0,0,.18);
+  transition:.3s ease;
+}
+
+.product-card:hover{
+  transform:translateY(-8px);
+}
+
+.product-card img{
+  width:100%;
+  max-height:180px;
+  object-fit:contain;
+  margin-bottom:15px;
+}
+
+.product-card h2{
+  font-size:16px;
+  margin-bottom:6px;
+}
+
+.product-card p{
+  font-weight:bold;
+  margin-bottom:14px;
+}
+
+.product-card button{
+  background:linear-gradient(135deg, #5dade2, #3498db);
+  color:var(--putih);
+  border:none;
+  padding:11px 28px;
+  border-radius:14px;
+  font-weight:bold;
+  cursor:pointer;
+  transition:.3s;
+}
+
+.product-card button:hover{
+  transform:scale(1.05);
+}
+
+/* ================= TENTANG SAYA ================= */
+.card{
+  background:var(--putih);
+  width:90%;
+  max-width:430px;
+  margin:35px auto;
+  padding:30px;
+  border-radius:26px;
+  text-align:center;
+  box-shadow:0 20px 45px rgba(0,0,0,.22);
+}
+
+.card img{
+  width:140px;
+  height:140px;
+  border-radius:50%;
+  border:5px solid var(--biru);
+  margin-bottom:15px;
+}
+
+.card h2{
+  color:var(--biru);
+  margin-bottom:15px;
+}
+
+.card p{
+  margin:8px 0;
+  font-size:14px;
+}
+
+/* ================= KONTAK ================= */
+.kontak a{
+  display:inline-block;
+  margin:10px 6px;
+  padding:11px 22px;
+  color:#fff;
+  border-radius:14px;
+  text-decoration:none;
+  font-weight:bold;
+  transition:.3s;
+}
+
+.kontak a:hover{
+  transform:scale(1.05);
+}
+
+.email{
+  background:linear-gradient(135deg,#5dade2,#3498db);
+}
+
+.wa{
+  background:linear-gradient(135deg,#2ecc71,#25D366);
+}
+
+/* ================= FOOTER ================= */
+footer{
+  background:linear-gradient(135deg, var(--biru), var(--biru-gelap));
+  color:#fff;
+  text-align:center;
+  padding:16px;
+  margin-top:40px;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width:600px){
+  nav ul{
+    gap:18px;
+  }
+}
